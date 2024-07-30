@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Básica</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .calculator button {
+            width: 100%;
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="calculator">
+                    <input type="text" id="display" class="form-control mb-3" disabled>
+                    <div class="row">
+                        <div class="col-6">
+                            <button class="btn btn-primary" onclick="agregarNumero(7)">7</button>
+                        </div>
+                        <div class="col-6">
+                            <button class="btn btn-primary" onclick="agregarNumero(8)">8</button>
+                        </div>
+                        <div class="col-6">
+                            <button class="btn btn-primary" onclick="agregarNumero(9)">9</button>
+                        </div>
+                        <div class="col-6">
+                            <button class="btn btn-danger" onclick="operar('sumar')">+</button>
+                        </div>
+                        <div class="col-6">
+                            <button class="btn btn-primary" onclick="agregarNumero(4)">4</button>
+                        </div>
+                        <div class="col-6">
+                            <button class="btn btn-primary" onclick="agregarNumero(5)">5</button>
+                        </div>
+                        <div class="col-6">
+                            <button class="btn btn-primary" onclick="agregarNumero(6)">6</button>
+                        </div>
+                        <div class="col-6">
+                            <button class="btn btn-danger" onclick="operar('restar')">-</button>
+                        </div>
+                        <div class="col-6">
+                            <button class="btn btn-primary" onclick="agregarNumero(1)">1</button>
+                        </div>
+                        <div class="col-6">
+                            <button class="btn btn-primary" onclick="agregarNumero(2)">2</button>
+                        </div>
+                        <div class="col-6">
+                            <button class="btn btn-primary" onclick="agregarNumero(3)">3</button>
+                        </div>
+                        <div class="col-6">
+                            <button class="btn btn-danger" onclick="operar('multiplicar')">*</button>
+                        </div>
+                        <div class="col-6">
+                            <button class="btn btn-primary" onclick="agregarNumero(0)">0</button>
+                        </div>
+                        <div class="col-6">
+                            <button class="btn btn-warning" onclick="operar('dividir')">/</button>
+                        </div>
+                        <div class="col-6">
+                            <button class="btn btn-success" onclick="calcular()">=</button>
+                        </div>
+                        <div class="col-6">
+                            <button class="btn btn-secondary" onclick="limpiar()">C</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <h3>Resultados</h3>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Operación</th>
+                            <th>Resultado</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tablaResultados">
+                        
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/main.js"></script>
+</body>
+</html>
